@@ -30,29 +30,56 @@
                     </form>
                 </div>
                 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    kjksaad
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <img class="img-thumbnail" src="{% static 'img/cat2.jpg' %}" width="40" height="40" alt="Avatar">
+                    <div class="ml-2 d-flex flex-column">
+                        <b class="text-white">Moleque</b>
+                        <span>
+                            <a href="#" class="badge badge-secondary">settings</a>
+                            <a href="#" class="badge badge-secondary">log out</a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </nav>
         
-        <div>
+        <div class="mb-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-sm-8">
                         {% block content %}
                         {% endblock %}
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <div class="container">
                             <div class="row">
-                                <div class="col">
+                                <div class="mt-5 mb-4 col">
                                     <h2>Popular Tags</h2>
+                                    <div>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Jinga</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Paranae</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Capoeira</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>cdo</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Brazil</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Olele</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Bahia</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Paranae</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Jinga</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Capoeirando</h4></a>
+                                        <a href="#" class="my-1 mx-1 badge badge-secondary"><h4>Jinga</h4></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <h2>Best Members</h2>
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-secondary"><b>Jinga</b></a>
+                                        <a href="#" class="text-secondary"><b>Paranae</b></a>
+                                        <a href="#" class="text-secondary"><b>Capoeira</b></a>
+                                        <a href="#" class="text-secondary"><b>cdo</b></a>
+                                        <a href="#" class="text-secondary"><b>Brazil</b></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
