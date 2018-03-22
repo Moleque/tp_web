@@ -1,0 +1,50 @@
+{% extends 'forum/base.html' %}
+
+{% block content %}
+	<a class="btn btn-warning active" href="#" role="button">New questions</a>
+	<a class="btn btn-warning" href="www.cdo.ru" role="button">Hot questions</a>
+	
+	<div class="card text-white bg-dark mb-3">
+		<div class="card-body container">
+			<div class="row">
+				<div class="col-sm-2">
+					<div class="p-2 d-flex justify-content-center align-items-start">
+						<img src="/static/img/cat2.jpg" alt="Generic placeholder image">
+					</div>
+					<div class="p-2 d-flex justify-content-around align-items-center">
+						<div class="badge badge-success align-self-stretch d-flex align-items-center"><h3>19</h3></div>
+						<div class="btn-group-vertical btn-group-sm">
+							<button type="button" class="btn btn-success">+</button>
+							<button type="button" class="btn btn-danger">-</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-10">
+					<div class="media-body container">
+						<div class="row">
+							<div class="col-sm">
+								<a href="" class="text-warning"><h5 class="mt-0">Center-aligned media</h5></a>
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+								<p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							</div>
+							<div class="w-100"></div>
+							<div class="col-sm">
+								<a href="#" class="p-2 badge badge-warning">answer (4)</a>
+							</div>
+							<div class="col-sm">
+								<span class="text-warning">
+									Tags:
+									<a href="#" class="badge badge-warning">Jinga</a>
+									<a href="#" class="badge badge-warning">Paranae</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
+  
