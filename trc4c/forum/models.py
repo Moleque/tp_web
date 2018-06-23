@@ -1,30 +1,38 @@
+from __future__ import unicode_literals
+
 from django.db import models
-"""from django.utils import timezone
+from django.contrib.auth.models import User
+
+class Profile(models.Model):
+    user = models.OneToOneField(User)
+    rating = models.IntegerField()
+
 
 class Question(models.Model):
-	author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
+    author = models.ForeignKey(Profile)
+    title = models.CharField(max_length=64)
     text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    rating = models.IntegerField()
+    created = models.DateTimeField(auto_now_add=True)
+    objects = models.Manager()
 
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
 
-    def __str__(self):
-        return self.title
-
-class Comment(models.Model):
-	author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
+class Answer(models.Model):
+    author = models.ForeignKey(Profile)
+    question = models.ForeignKey(Question)
+    right_flag = models.BooleanField(default=True)
     text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    rating = models.IntegerField()
+    created = models.DateTimeField(auto_now_add=True)
 
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
 
-    def __str__(self):
-        return self.title"""
+class Tag(models.Model):
+    question = models.ManyToManyField(Question)
+    word = models.CharField(max_length=25)
+
+
+class Like(models.Model):
+    question = models.ForeignKey(Question)
+    user = models.ForeignKey(Profile)
+    value = models.BooleanField()
+

@@ -1,0 +1,32 @@
+{% block content %}
+	<div class="card text-white bg-secondary mb-1 border border-warning">
+		<div class="container m-2">
+			<div class="row">
+				<div class="col-sm-2">
+					<div class="p-2 d-flex justify-content-center align-items-start">
+						<img class="img-thumbnail" src="/static/img/cat2.jpg" width="60" height="60" alt="Generic placeholder image">
+					</div>
+					<div class="p-2 d-flex justify-content-center align-items-center">
+						<div class="mr-1 badge badge-success align-self-stretch d-flex align-items-center"><h5>{{ answer.rating }}</h5></div>
+						<div class="btn-group-vertical btn-group-sm">
+							<button type="button" class="btn btn-dark">+</button>
+							<button type="button" class="btn btn-dark">-</button>
+						</div>
+					</div>
+				</div>
+				<div class="p-0 my-2 col-sm-10">
+					<div class="media-body container">
+						<p>{{ answer.text }}</p>
+					</div>
+					<div class="w-100"></div>
+					<div class="col-sm">
+						<div class="custom-control custom-checkbox mb-3">
+							<input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+							<label class="custom-control-label" for="customControlValidation1">Correct!</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

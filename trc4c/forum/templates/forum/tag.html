@@ -1,0 +1,21 @@
+{% extends 'forum/base.html' %}
+
+{% block content %}
+	<div class="my-2 d-flex">
+		<a class="my-1 btn btn-dark btn-lg active" href="#" role="button">Tag</a>
+		<a class="my-1 ml-2 p-1 align-self-end btn btn-warning btn-lg active" href="#">{{ tag.word }}</a>
+	</div>
+
+	{% for question in questions %}
+		{% include 'forum/includes/post.html' %}
+	{% endfor %}
+
+	<div class="btn-group mr-2" role="group" aria-label="Lists">
+	    <button type="button" class="btn btn-dark active">1</button>
+	    <button type="button" class="btn btn-dark">2</button>
+	    <button type="button" class="btn btn-dark">3</button>
+	    <button type="button" class="btn btn-dark">...</button>
+	    <button type="button" class="btn btn-dark">15</button>
+	</div>
+	
+{% endblock %}

@@ -1,0 +1,11 @@
+{% block content %}
+	<div class="btn-group mr-2" role="group" aria-label="Lists">
+		{% for page in questions.paginator.page_range %}
+		   	{% if page == questions.number %}
+		   		<a href="?page={{ page }}" type="button" class="btn btn-dark active">{{ page }}</a>
+		   	{% else %}
+		   		<a href="?page={{ page }}" type="button" class="btn btn-dark">{{ page }}</a>
+		   	{% endif %}
+		{% endfor %}
+	</div>
+{% endblock %}
